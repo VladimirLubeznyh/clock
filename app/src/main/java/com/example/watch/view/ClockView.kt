@@ -27,7 +27,7 @@ class ClockView @JvmOverloads constructor(
     defStyleRes: Int = R.style.DefaultClockStyle
 ) : View(context, attributeSet, defStyleAttr, defStyleRes) {
 
-    private val horsSet: Set<Int> = setOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    private val horusSet: Set<Int> = setOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
 
     private val rectText: Rect = Rect()
 
@@ -206,7 +206,7 @@ class ClockView @JvmOverloads constructor(
             )
         paintText.textSize = fontSize
 
-        for (hour in horsSet) {
+        for (hour in horusSet) {
             val strHour = hour.toString()
             paintText.getTextBounds(strHour, 0, strHour.length, rectText)
             val angle =
@@ -400,13 +400,13 @@ class ClockView @JvmOverloads constructor(
 
         override fun writeToParcel(out: Parcel, flags: Int) {
             super.writeToParcel(out, flags)
-            out.writeInt(colorHourHand!!)
-            out.writeInt(colorMinuteHand!!)
-            out.writeInt(colorSecondHand!!)
-            out.writeInt(colorOuterCircle!!)
-            out.writeInt(colorText!!)
-            out.writeInt(colorMinuteScale!!)
-            out.writeInt(colorInnerBackground!!)
+            out.writeInt(colorHourHand ?: DEFAULT_COLOR)
+            out.writeInt(colorMinuteHand ?: DEFAULT_COLOR)
+            out.writeInt(colorSecondHand ?: DEFAULT_COLOR)
+            out.writeInt(colorOuterCircle ?: DEFAULT_COLOR)
+            out.writeInt(colorText ?: DEFAULT_COLOR)
+            out.writeInt(colorMinuteScale ?: DEFAULT_COLOR)
+            out.writeInt(colorInnerBackground ?: DEFAULT_COLOR_BACKGROUND)
         }
 
         companion object {

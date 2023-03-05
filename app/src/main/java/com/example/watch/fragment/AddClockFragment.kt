@@ -1,4 +1,4 @@
-package com.example.watch
+package com.example.watch.fragment
 
 import android.app.ActionBar.LayoutParams
 import android.graphics.Color
@@ -19,7 +19,7 @@ class AddClockFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = AddClockFragmentBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -29,10 +29,11 @@ class AddClockFragment : Fragment() {
 
         binding.btAdd.setOnClickListener {
             val height =
-                if (binding.etHeight.text.isNotEmpty()) binding.tvHeight.text.toString()
-                    .toInt() else 0
-            val width = if (binding.etWidth.text.isNotEmpty()) binding.tvWidth.text.toString()
-                .toInt() else 0
+                if (binding.etHeight.text.isNotEmpty()) binding.etHeight.text.toString().toInt()
+                else 0
+            val width =
+                if (binding.etWidth.text.isNotEmpty()) binding.etWidth.text.toString().toInt()
+                else 0
 
             addClock(width, height)
         }
