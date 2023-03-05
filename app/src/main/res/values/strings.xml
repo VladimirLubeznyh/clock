@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Clock</string>
+    <string name="background">Background</string>
+    <string name="hour_hand">Hour hand</string>
+    <string name="minute_hand">Minute hand</string>
+    <string name="second_hand">Second hand</string>
+    <string name="outer_circle">Outer circle</string>
+    <string name="text_numbers">Text numbers</string>
+    <string name="scale">Scale</string>
+    <string name="add">add</string>
+    <string name="width">width</string>
+    <string name="height">height</string>
+    <string name="next_fragment">next fragment</string>
+</resources>
+

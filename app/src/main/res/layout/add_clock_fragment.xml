@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/svClocks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llClockList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/add" />
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btAdd"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_50"
+        android:layout_margin="@dimen/dp_10"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/width"
+        app:layout_constraintBottom_toBottomOf="@+id/btAdd"
+        app:layout_constraintStart_toEndOf="@+id/btAdd"
+        app:layout_constraintTop_toBottomOf="@id/svClocks" />
+
+    <EditText
+        android:id="@+id/etWidth"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvWidth"
+        app:layout_constraintTop_toBottomOf="@+id/svClocks" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:text="@string/height"
+        app:layout_constraintBottom_toBottomOf="@+id/btAdd"
+        app:layout_constraintStart_toEndOf="@id/etWidth"
+        app:layout_constraintTop_toBottomOf="@id/svClocks" />
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvHeight"
+        app:layout_constraintTop_toBottomOf="@+id/svClocks" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

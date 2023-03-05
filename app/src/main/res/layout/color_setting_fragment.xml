@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.watch.ColorSettingFragment">
+
+    <com.example.watch.view.ClockView
+        android:id="@+id/clock"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="@dimen/dp_160"
+        android:layout_height="@dimen/dp_70"
+        android:text="@string/next_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clock">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/innerBackgroundColor"
+                layout="@layout/item_setting_slider" />
+
+            <include
+                android:id="@+id/hourHandColor"
+                layout="@layout/item_setting_slider" />
+
+            <include
+                android:id="@+id/minuteHandColor"
+                layout="@layout/item_setting_slider" />
+
+            <include
+                android:id="@+id/secondHandColor"
+                layout="@layout/item_setting_slider" />
+
+            <include
+                android:id="@+id/outerCircleColor"
+                layout="@layout/item_setting_slider" />
+
+            <include
+                android:id="@+id/textNumbersColor"
+                layout="@layout/item_setting_slider" />
+
+            <include
+                android:id="@+id/minuteScaleColor"
+                layout="@layout/item_setting_slider" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

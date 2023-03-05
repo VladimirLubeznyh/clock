@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Skillcinema</string>
+
+    <!-- OnboardingFragment  -->
+    <string name="skip">Пропустить</string>
+    <string name="find_about_premieres">Узновай\nо премьерах</string>
+    <string name="create_collections">Создавай\nколлекции</string>
+    <string name="share_with_friends">Делись\nс друзьями</string>
+
+    <!-- HomePageFragment  -->
+    <string name="all">Все</string>
+    <string name="show_all">Показать все</string>
+    <string name="home">Домашняя</string>
+    <string name="search">Поиск</string>
+    <string name="profile">Профиль</string>
+    <string name="unknown">неизвестно</string>
+    <string name="premieres">Премьеры</string>
+    <string name="random">Рандом</string>
+    <string name="beast">Лучшие</string>
+    <string name="popular">Популярные</string>
+    <string name="serials">Сериалы</string>
+</resources>
